@@ -1,6 +1,8 @@
 ## Wood test
 A small image-based quiz for identifying types of wood made with React.  The idea for this came up between some other students and I in our woodworking class.
 
+Early, early demo [here](http://resolute-uncle.surge.sh/).
+
 ### Stack
 - React
 - Webpack v2

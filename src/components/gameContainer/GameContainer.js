@@ -36,7 +36,8 @@ class GameContainer extends Component {
     }
   }
 
-  nextCard() {
+  nextCard(e) {
+    e.preventDefault();
     const nextIdx = this.state.currentWoodIdx + 1;
 
     this.setState({

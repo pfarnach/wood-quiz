@@ -25,7 +25,7 @@ const config = {
         use: [
           {
             loader: 'url-loader',
-            options: { limit: 40000 }
+            options: { limit: 50000 }
           },
           'image-webpack-loader'
         ],
