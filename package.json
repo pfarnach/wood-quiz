@@ -5,7 +5,7 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
     "start": "webpack-dev-server --progress --colors",
     "test": "mocha **/*.spec.js --compilers js:babel-core/register,jpg:test.config.js",
     "lint": "eslint ./src --ext .js --cache",
