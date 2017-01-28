@@ -21,5 +21,4 @@ Early, early demo [here](http://resolute-uncle.surge.sh/).
 5.) Lint the code with `yarn run lint:watch`.
 
 ### TODO
-- Style it!
 - Add more types of wood and randomize them on load
