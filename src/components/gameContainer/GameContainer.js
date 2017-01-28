@@ -19,10 +19,11 @@ class GameContainer extends Component {
     this.setState({ guessInput: e.target.value });
   }
 
-  submitAnswer() {
+  submitAnswer(e) {
+    e.preventDefault();
     const { guessInput, currentWoodIdx, answersCorrect } = this.state;
 
-    if (guessInput.toLowerCase() === data[currentWoodIdx].name.toLowerCase()) {
+    if (data[currentWoodIdx].acceptedNames.includes(guessInput.toLowerCase())) {
       this.setState({
         showAnswer: true,
         correctAnswer: true,
@@ -70,15 +71,17 @@ class GameContainer extends Component {
     const { currentWoodIdx, guessInput, showAnswer, isLastCard } = this.state;
 
     return (
-      <div>
+      <div className="game-container">
         <div>
           <WoodCard data={ data[currentWoodIdx] } showAnswer={ showAnswer } />
         </div>
         <div className="answer-msg">
-          { this.renderAnswerMsg() }
-        </div>
-        <div>
-          { this.renderFinalScore() }
+          <div>
+            { this.renderAnswerMsg() }
+          </div>
+          <div>
+            { this.renderFinalScore() }
+          </div>
         </div>
         <GameInputs
           showAnswer={ showAnswer }

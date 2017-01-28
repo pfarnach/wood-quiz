@@ -3,9 +3,13 @@ import React, { PropTypes } from 'react';
 const WoodCard = ({ data, showAnswer }) => {
   return (
     <div className="wood-card">
-      <img src={ data.img } alt={ data.name } />
+      <img
+        src={ data.img }
+        alt={ data.name }
+        className="box-shadow"
+      />
       { showAnswer &&
-        <div>{ data.name }</div>
+        <h2 className="box-shadow">{ data.name }</h2>
       }
     </div>
   );

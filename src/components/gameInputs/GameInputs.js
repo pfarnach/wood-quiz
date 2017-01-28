@@ -3,25 +3,34 @@ import React, { PropTypes } from 'react';
 const GameInputs = (props) => {
   const { showAnswer, guessInput, isLastCard, nextCard, submitAnswer, updateInput } = props;
 
+  if (isLastCard && showAnswer) {
+    return null;
+  }
+
   return (
-    <form>
-      <input
-        type="text"
-        placeholder="Enter a guess..."
-        value={ guessInput }
-        onChange={ updateInput }
-        disabled={ showAnswer }
-      />
-      <button
-        type="submit"
-        onClick={ submitAnswer }
-        disabled={ showAnswer }
-      >
-        Guess
-      </button>
-      { !isLastCard &&
-        <button onClick={ nextCard }>Next</button>
+    <form className="inputs">
+      { !showAnswer &&
+        <input
+          type="text"
+          placeholder="Enter an answer..."
+          value={ guessInput }
+          onChange={ updateInput }
+        />
       }
+      <div className="button-group">
+        { !showAnswer &&
+          <button
+            type="submit"
+            className="box-shadow"
+            onClick={ submitAnswer }
+          >
+            Submit
+          </button>
+         }
+        { (!isLastCard && showAnswer) &&
+          <button className="box-shadow" onClick={ nextCard }>Next</button>
+        }
+      </div>
     </form>
   );
 };

@@ -36,4 +36,11 @@ describe('<GameInputs />', () => {
     const buttons = wrapper.find('button');
     expect(buttons).to.have.length(1);
   });
+
+  it('should not render anything if game is over', () => {
+    const newProps = Object.assign({}, props, { isLastCard: true, showAnswer: true });
+    const wrapper = shallow(<GameInputs { ...newProps } />);
+
+    expect(wrapper.type()).to.equal(null);
+  });
 });

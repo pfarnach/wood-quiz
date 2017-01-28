@@ -4,8 +4,8 @@ import GameContainer from '../gameContainer/GameContainer';
 
 const App = () => {
   return (
-    <div>
-      <h1>Know Your Wood</h1>
+    <div className="container">
+      <h1 className="app-title">wood type quiz</h1>
       <GameContainer />
     </div>
   );
