@@ -52,7 +52,7 @@ MAIN CONTAINER
   background-color: #FA7921;
   width: 300px;
   height: 40px;
-  margin: 12px 0;
+  margin: 12px 0 30px;
   font-size: 1.2em;
   text-transform: uppercase;
   cursor: pointer;
@@ -83,7 +83,7 @@ CARD
 
 .wood-card img {
   max-width: 400px;
-  width: 100%;
+  width: calc(100% - 16px);
   border: 8px solid #FA7921;
 }
 
@@ -98,4 +98,17 @@ GAME MESSAGES
 
 .answer-msg > div {
   margin-top: 32px;
+}
+
+/*
+MEDIA QUERIES
+*/
+@media(max-width: 420px) {
+  .container .app-title {
+    font-size: 2.0em;
+  }
+
+  .inputs button, .inputs input[type="text"] {
+    width: 100%;
+  }
 }

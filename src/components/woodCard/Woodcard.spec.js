@@ -26,4 +26,11 @@ describe('<WoodCard />', () => {
 
     expect(img).to.exist;  // eslint-disable-line no-unused-expressions
   });
+
+  it('should render the name when showAnswer is true', () => {
+    const newProps = Object.assign({}, props, { showAnswer: true });
+    const wrapper = shallow(<WoodCard { ...newProps } />);
+
+    expect(wrapper.find('h2')).to.have.length(1);
+  });
 });

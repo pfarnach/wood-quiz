@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
-import data from '../../woodData';
+import woodData from '../../woodData';
+import shuffle from '../../utils/shuffle';
 import WoodCard from '../woodCard/WoodCard';
 import GameInputs from '../gameInputs/GameInputs';
+
+const data = shuffle(woodData);
 
 class GameContainer extends Component {
   state = {

@@ -1,13 +1,13 @@
 ## Wood test
 A small image-based quiz for identifying types of wood made with React.  The idea for this came up between some other students and I in our woodworking class.
 
-Early, early demo [here](http://resolute-uncle.surge.sh/).
+Demo live [here](http://resolute-uncle.surge.sh/).
 
 ### Stack
 - React
-- Webpack v2
+- Webpack2
 - Mocha/chai/enzyme
-- Eslint
+- eslint
 
 ### Use
 1.) Clone the repo
@@ -21,4 +21,4 @@ Early, early demo [here](http://resolute-uncle.surge.sh/).
 5.) Lint the code with `yarn run lint:watch`.
 
 ### TODO
-- Add more types of wood and randomize them on load
+- Add more types of wood
